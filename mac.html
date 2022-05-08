@@ -7,6 +7,7 @@
     <title>Mac - Apple</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="css/product-tab.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -16,7 +17,7 @@
         <a href="iphone.html" target="_self">iPhone</a>
     </div>
 
-    <div style="text-align: center; margin-top: 5vh;">
+    <div style="text-align: center; margin-top: 8vh;">
         <b style="color: tomato; font-size: 12px;">New</b><br>
         <b style="font-size: 20px;">MacBook Pro</b><br>
         <b style="font-size: 25px;">Supercharged for Pros</b><br>
@@ -26,17 +27,16 @@
         <img src="https://www.apple.com/v/mac/home/bk/images/overview/hero/hero_macbook_pro_14_16__0y2t2v3g4hu2_large.jpg" style="width: 70vw;">
     </div>
 
-    <div style="text-align: center; margin-top: 10%;">
-        <b style="font-size: 20px;">Which Mac is right for you?</b>
-        <div style="margin-top: 50px;">
-            <b style="font-size: 15px; color: gray;">Notebook</b>
-            <b style="font-size: 15px; color: gray; margin-left: 20px;">Desktop</b><br>
-            <hr width="150px">
+    <div class="grey-rounded-bg">
+        <div style="text-align: center; margin-top: 10%;">
+            <b style="font-size: 20px;">Which Mac is right for you?</b>
+            <div style="margin-top: 50px;">
+                <input type="button" value="NoteBook" class="product-compare-button" onclick="collapse_form('compare-desktops','compare-notebooks',this,'DeskButton')" id='NoteButton' style="background-color: black; color: white;">
+                <input type="button" value="Desktops" class="product-compare-button" onclick="collapse_form('compare-notebooks','compare-desktops',this,'NoteButton')" id='DeskButton' style="margin-left: 20px;">
+                <hr width="150px">
+            </div>
         </div>
-    </div>
-
-    <div>
-        <table class="center-table">
+        <table class="center-table"  id="compare-notebooks" style="display: block; opacity: 1;">
             <tr>
                 <td>
                     <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_mba__fchj615oz0yi_large.png" style="width: 20vw;">
@@ -164,7 +164,185 @@
                 <td><hr></td>
             </tr>
         </table>
+        <table class="center-table" id="compare-desktops" style="display: none; opacity: 0;">
+            <tr>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_imac24__bdgus6d1xqb6_large.png" style="width: 15vw;">
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_imac27__drwrk3ro58sy_large.png" style="width: 17vw;">
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_macpro__cj3i514iwpua_large.png" style="width: 12vw;">
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_macmini__b77zzeep1s6a_large.png" style="width: 12vw;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <b style="font-size: 20px;">iMac 24"</b><br>
+                    <b style="font-size: 15px;">From $1299</b>
+    
+                </td>
+                <td>
+                    <b style="font-size: 20px;">iMac 27”</b><br>
+                    <b style="font-size: 15px;">From $1799</b>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">Mac Pro</b><br>
+                    <b style="font-size: 15px;">From $5999</b>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">Mac Mini</b><br>
+                    <b style="font-size: 15px;">From $699</b>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <a class="blue-bg-button" style="color: white;" href="https://www.apple.com/shop/buy-mac/imac-24">Buy</a><br><br>
+                    <a href="https://www.apple.com/imac-24/" style="color: rgb(0, 102, 204);">Learn more ></a><br>
+                    <hr>
+                </td>
+                <td>
+                    <a class="blue-bg-button" style="color: white;" href="https://www.apple.com/shop/buy-mac/imac-27">Buy</a><br><br>
+                    <a href="https://www.apple.com/imac-27/" style="color: rgb(0, 102, 204);">Learn more ></a><br>
+                    <hr>
+                </td>
+                <td>
+                    <a class="blue-bg-button" style="color: white;" href="https://www.apple.com/shop/buy-mac/mac-pro">Buy</a><br><br>
+                    <a href="https://www.apple.com/mac-pro/" style="color: rgb(0, 102, 204);">Learn more ></a><br>
+                    <hr>
+                </td>
+                <td>
+                    <a class="blue-bg-button" style="color: white;" href="https://www.apple.com/shop/buy-mac/mac-mini">Buy</a><br><br>
+                    <a href="https://www.apple.com/mac-mini/" style="color: rgb(0, 102, 204);">Learn more ></a><br>
+                    <hr>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_m1__dsskrswqk7wy_large.png"><br>
+                    <b style="font-size: 10px;color: gray;">Apple M1 chip</b>
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_intel__fmgvvgs5jy2y_large.png"><br>
+                    <b style="font-size: 10px; color: gray;">Up to Intel Core i9</b>
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_intel__fmgvvgs5jy2y_large.png"><br>
+                    <b style="font-size: 10px; color: gray;">Intel Xeon W processor</b>
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_m1__dsskrswqk7wy_large.png"><br>
+                    <b style="font-size: 10px; color: gray;">Apple M1 chip</b>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <b>8-core</b><br>
+                    <b style="color: gray;">CPU</b>
+                </td>
+                <td>
+                    <b>10-core</b><br>
+                    <b style="color: gray;">CPU</b>
+                </td>
+                <td>
+                    <b>28-core</b><br>
+                    <b style="color: gray;">CPU</b>
+                </td>
+                <td>
+                    <b>8-core</b><br>
+                    <b style="color: gray;">CPU</b>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <b>8-core</b><br>
+                    <b style="color: gray;">GPU</b>
+                </td>
+                <td>
+                    <b>AMD</b><br>
+                    <b style="color: gray;">Radeon Pro 5700 XT GPU</b>
+                </td>
+                <td>
+                    <b>AMD</b><br>
+                    <b style="color: gray;">Radeon Pro W6800X Duo GPU/b>
+                </td>
+                <td>
+                    <b>8-core</b><br>
+                    <b style="color: gray;">GPU</b>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_unified_memory__emykppauav2a_large.png"><br>
+                    <b style="font-size: 10px;color: gray;">Upto 16 GB of unified memory</b>
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_memory__e26txeytwkcy_large.png"><br>
+                    <b style="font-size: 10px; color: gray;">Upto 128 GB of unified memory</b>
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_memory__e26txeytwkcy_large.png"><br>
+                    <b style="font-size: 10px; color: gray;">Upto 1.5 TB of unified memory</b>
+                </td>
+                <td>
+                    <img src="https://www.apple.com/v/mac/home/bk/images/overview/compare/compare_icon_unified_memory__emykppauav2a_large.png"><br>
+                    <b style="font-size: 10px; color: gray;">Upto 16 GB of unified memory</b>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <b style="font-size: 20px;">2TB</b><br>
+                    <b style="font-size: 10px; color: gray;">Maximum configurable storage</b>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">8TB</b><br>
+                    <b style="font-size: 10px; color: gray;">Maximum configurable storage</b>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">8TB</b><br>
+                    <b style="font-size: 10px; color: gray;">Maximum configurable storage</b>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">2TB</b><br>
+                    <b style="font-size: 10px; color: gray;">Maximum configurable storage</b>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b style="font-size: 20px;">4.5K</b><br>
+                    <b style="font-size: 10px; color: gray;">Retina Display</b>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">5K</b><br>
+                    <b style="font-size: 10px; color: gray;">Retina Display</b>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">-</b><br>
+                </td>
+                <td>
+                    <b style="font-size: 20px;">-</b><br>
+                </td>
+            </tr>
+    
+            <tr>
+                <td><hr></td>
+                <td><hr></td>
+                <td><hr></td>
+            </tr>
+        </table>
     </div>
+</div>
 
     <div style="margin: 10vw; margin-top: 2%; margin-bottom: 2%; font-size: 0.75vw;">
         <p>† Apple Card Monthly Installments (ACMI) is a 0% APR payment option available to select at checkout for certain Apple products purchased at Apple Store locations, apple.com, the Apple Store app, or by calling 1-800-MY-APPLE, and is subject to credit approval and credit limit. See https://support.apple.com/kb/HT211204 for more information about eligible products. Variable APRs for Apple Card other than ACMI range from 10.99% to 21.99% based on creditworthiness. Rates as of April 1, 2020. If you choose the pay-in-full or one-time-payment option for an ACMI eligible purchase instead of choosing ACMI as the payment option at checkout, that purchase will be subject to the variable APR assigned to your Apple Card. Taxes and shipping are not included in ACMI and are subject to your card’s variable APR. See the Apple Card Customer Agreement for more information. ACMI is not available for purchases made online at the following special stores: Apple Employee Purchase Plan; participating corporate Employee Purchase Programs; Apple at Work for small businesses; Government, and Veterans and Military Purchase Programs, or on refurbished devices. iPhone activation required on iPhone purchases made at an Apple Store with one of these national carriers: AT&T, Sprint, Verizon, or T-Mobile.
